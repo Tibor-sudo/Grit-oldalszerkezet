@@ -1,0 +1,101 @@
+main,
+header,
+article,
+aside,
+nav,
+footer {
+  border: 2px solid white;
+  display: grid;
+  margin: 5px;
+}
+body {
+  background-image: url(kepek/aurora.jpg);
+  background-size: cover;
+}
+main {
+  display: grid;
+  color: white;
+  grid-template-columns: 2fr 4fr 3fr;
+  grid-template-areas:
+    "h h h "
+    "n n n "
+    "asb ar asj"
+    "f f f ";
+}
+nav {
+  display: grid;
+}
+nav ul {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10%;
+  list-style-type: none;
+  padding: 5px;
+  text-align: left;
+  list-style-type: none;
+}
+nav ul li{
+  background-color: rgb(36, 133, 125);
+  padding: 7px;
+}
+nav ul li:hover{
+    background-color: rgb(96, 175, 171);
+}
+nav ul a {
+  text-decoration: none;
+  color: rgb(207, 207, 13);
+}
+header {
+  grid-area: h;
+}
+nav {
+  grid-area: n;
+}
+.bal {
+  grid-area: asb;
+  padding: 5px;
+}
+.jobb {
+  grid-area: asj;
+  padding: 5px;
+}
+article {
+  grid-area: ar;
+  grid-template-rows: auto;
+  padding: 5px;
+}
+footer {
+  grid-area: f;
+  padding: 5px;
+}
+p {
+  text-align: justify;
+}
+.artfel {
+  padding: 5px;
+  border: 2px solid white;
+  margin: 5px 5px 0px 5px;
+}
+.artle {
+  padding: 5px;
+  border: 2px solid white;
+  margin: 0px 5px 5px 5px;
+}
+.artice {
+  border: solid white;
+}
+@media screen and (max-width: 600px) {
+  nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "n"
+      "asb"
+      "ar"
+      "asj"
+      "f";
+  }
+}
